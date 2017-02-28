@@ -1,7 +1,7 @@
 # Web application based on Angular2
 
 ## Setup
-Where we work with the following tutorial: https://angular.io/docs/ts/latest/cli-quickstart.html
+Where we work with the project creation tutorial at https://angular.io/docs/ts/latest/cli-quickstart.html
 
 
 ### Angular setup and app creation
@@ -34,4 +34,13 @@ We have end to end testing preconfigured, check it out.
 sudo apt install chromium-browser
 sudo ln -s /usr/bin/chromium-browser /usr/bin/google-chrome
 ng test --singleRun
+```
+
+## Development
+Where we look at the more "Tour of Heroes" tutorial  https://angular.io/docs/ts/latest/tutorial
+
+### Create additional components for our HappyTri use case.
+```shell
+ng g component product.component
+ng g component scan.component
 ```
