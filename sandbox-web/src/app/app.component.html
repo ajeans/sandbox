@@ -1,10 +1,17 @@
 <h1>
   {{title}}
 </h1>
+<h2>Scans</h2>
+<ul class="scans">
+  <li *ngFor="let scan of scans"
+      (click)="onScanSelect(scan)">
+    <app-scan [scan]="scan" [class.selected]="scan === selectedScan"></app-scan>
+  </li>
+</ul>
+<h2>Products</h2>
 <ul class="products">
   <li *ngFor="let product of products"
-      [class.selected]="product === selectedProduct"
-      (click)="onSelect(product)">
-    <span class="badge">{{product.code}}</span> {{product.name}}
+      (click)="onProductSelect(product)">
+    <app-product [product]="product" [class.selected]="product === selectedProduct"></app-product>
   </li>
 </ul>

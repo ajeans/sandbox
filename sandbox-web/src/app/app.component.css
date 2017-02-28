@@ -1,5 +1,18 @@
-h1 {
-  color: #369;
+h1 h2 h3 h4 {
   font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  color: #306090;
   font-size: 250%;
+}
+
+h2 {
+  color: #306090;
+  font-size: 200%;
+}
+
+.selected {
+  background-color: #BBD8DC !important;
+  color: white;
 }
