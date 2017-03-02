@@ -44,3 +44,9 @@ Where we look at the more "Tour of Heroes" tutorial  https://angular.io/docs/ts/
 ng g component product.component
 ng g component scan.component
 ```
+
+### Create new services to provide access to content:
+```shell
+ng g service services/product
+ng g service services/scan
+``` 

@@ -1,29 +1,31 @@
 import {Component} from "@angular/core";
 import {Product} from "./product/product";
 import {Scan} from "./scan/scan";
-
-const PRODUCTS: Product[] = [
-  { code: "001", name: "Coca cola 33cl", description: "Canette de Coca-Cola, 33cl..."  },
-  { code: "002", name: "Coca cola 50cl", description: "Mini bouteille de Coca-Cola, 50cl..."  }
-];
-
-const SCANS: Scan[] = [
-  { product: PRODUCTS[0], date: new Date()  },
-  { product: PRODUCTS[0], date: new Date()  },
-  { product: PRODUCTS[1], date: new Date()  }
-];
+import {ProductService} from "./services/product.service";
+import {ScanService} from "./services/scan.service";
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  providers: [ProductService, ScanService]
 })
 export class AppComponent {
   title = 'Happy Tri!';
-  products = PRODUCTS
-  scans = SCANS
-  selectedProduct = PRODUCTS[0]
-  selectedScan = SCANS[0]
+  products : Product[];
+  scans : Scan[];
+  selectedProduct = null;
+  selectedScan = null;
+
+  constructor(private productService: ProductService, private scanService: ScanService) { }
+
+  ngOnInit(): void {
+    this.products = this.productService.getProducts();
+    this.selectedProduct = this.products[0];
+    this.scans = this.scanService.getScans();
+    this.selectedScan = this.scans[0];
+  }
+
 
   onProductSelect(product: Product): void {
     this.selectedProduct = product;
