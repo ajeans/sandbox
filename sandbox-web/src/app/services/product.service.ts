@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {Product} from "../product/product";
+import {Product} from "../model/product";
 
 export const PRODUCTS: Product[] = [
   { code: "001", name: "Coca cola 33cl", description: "Canette de Coca-Cola, 33cl..."  },

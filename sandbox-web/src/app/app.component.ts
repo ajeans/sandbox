@@ -1,6 +1,6 @@
 import {Component} from "@angular/core";
-import {Product} from "./product/product";
-import {Scan} from "./scan/scan";
+import {Product} from "./model/product";
+import {Scan} from "./model/scan";
 import {ProductService} from "./services/product.service";
 import {ScanService} from "./services/scan.service";
 
