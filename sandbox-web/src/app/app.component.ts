@@ -3,8 +3,8 @@ import {Product} from "./product/product";
 import {Scan} from "./scan/scan";
 
 const PRODUCTS: Product[] = [
-  { code: "001", name: "Coca cola 33cl"  },
-  { code: "002", name: "Coca cola 50cl"  }
+  { code: "001", name: "Coca cola 33cl", description: "Canette de Coca-Cola, 33cl..."  },
+  { code: "002", name: "Coca cola 50cl", description: "Mini bouteille de Coca-Cola, 50cl..."  }
 ];
 
 const SCANS: Scan[] = [
