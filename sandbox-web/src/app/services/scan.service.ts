@@ -11,8 +11,8 @@ const SCANS: Scan[] = [
 @Injectable()
 export class ScanService {
 
-  getScans(): Scan[] {
-    return SCANS;
+  getScans(): Promise<Scan[]> {
+    return Promise.resolve(SCANS);
   }
 
 }

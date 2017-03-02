@@ -8,7 +8,9 @@
     <app-scan [scan]="scan" [class.selected]="scan === selectedScan"></app-scan>
   </li>
 </ul>
-<app-product-details [product]="selectedScan.product"></app-product-details>
+<div *ngIf="selectedScan">
+  <app-product-details [product]="selectedScan.product"></app-product-details>
+</div>
 <br/>
 <h2>Products</h2>
 <ul class="products">
@@ -17,4 +19,6 @@
     <app-product [product]="product" [class.selected]="product === selectedProduct"></app-product>
   </li>
 </ul>
-<app-product-details [product]="selectedProduct"></app-product-details>
+<div *ngIf="selectedProduct">
+  <app-product-details [product]="selectedProduct"></app-product-details>
+</div>
