@@ -12,7 +12,9 @@ const SCANS: Scan[] = [
 export class ScanService {
 
   getScans(): Promise<Scan[]> {
-    return Promise.resolve(SCANS);
+    return new Promise(resolve => {
+      setTimeout(() => resolve(SCANS), 5000);
+    });
   }
 
 }

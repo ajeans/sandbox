@@ -10,6 +10,9 @@ export const PRODUCTS: Product[] = [
 export class ProductService {
 
   getProducts(): Promise<Product[]> {
-    return Promise.resolve(PRODUCTS);
+    //return Promise.resolve(PRODUCTS);
+    return new Promise(resolve => {
+      setTimeout(() => resolve(PRODUCTS), 1000);
+    });
   }
 }
