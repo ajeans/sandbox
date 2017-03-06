@@ -1,3 +1,7 @@
+<div *ngIf="!scans">
+  Loading...
+</div>
+
 <ul class="scans">
   <li *ngFor="let scan of scans"
       (click)="onScanSelect(scan)">

@@ -1,3 +1,6 @@
+<div *ngIf="!products">
+  Loading...
+</div>
 <a *ngFor="let product of products"
    [routerLink]="['/product', product.code]">
   <app-product [product]="product"></app-product>
