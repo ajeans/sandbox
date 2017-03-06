@@ -7,13 +7,17 @@ import { AppComponent } from './app.component';
 import { ProductComponent } from './product/product.component';
 import { ProductDetailsComponent } from './product/product-details.component';
 import { ScanComponent } from './scan/scan.component';
+import { ProductsComponent } from './product/products.component';
+import { ScansComponent } from './scan/scans.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductComponent,
     ProductDetailsComponent,
-    ScanComponent
+    ScanComponent,
+    ProductsComponent,
+    ScansComponent
   ],
   imports: [
     BrowserModule,

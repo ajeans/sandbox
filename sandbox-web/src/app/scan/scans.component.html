@@ -1,0 +1,6 @@
+<ul class="scans">
+  <li *ngFor="let scan of scans"
+      (click)="onScanSelect(scan)">
+    <app-scan [scan]="scan" [class.selected]="scan === selectedScan"></app-scan>
+  </li>
+</ul>
