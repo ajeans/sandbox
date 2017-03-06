@@ -1,5 +1,5 @@
 import {Component, OnInit, Input} from '@angular/core';
-import {Scan} from "../model/scan";
+import {Scan} from '../model/scan';
 
 @Component({
   selector: 'app-scan',
@@ -8,5 +8,5 @@ import {Scan} from "../model/scan";
 })
 export class ScanComponent {
   @Input()
-  scan: Scan
+  scan: Scan;
 }

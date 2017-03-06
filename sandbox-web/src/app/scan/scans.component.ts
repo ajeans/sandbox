@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {Scan} from "../model/scan";
-import {ScanService} from "../services/scan.service";
+import {Scan} from '../model/scan';
+import {ScanService} from '../services/scan.service';
 
 @Component({
   selector: 'app-scans',
@@ -10,7 +10,7 @@ import {ScanService} from "../services/scan.service";
 })
 export class ScansComponent implements OnInit {
 
-  scans : Scan[];
+  scans: Scan[];
   selectedScan = null;
 
   constructor(private scanService: ScanService) { }

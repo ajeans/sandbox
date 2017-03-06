@@ -1,9 +1,9 @@
-import {Component, OnInit} from "@angular/core";
-import {Params, ActivatedRoute} from "@angular/router";
+import {Component, OnInit} from '@angular/core';
+import {Params, ActivatedRoute} from '@angular/router';
 import {Location} from '@angular/common';
 import 'rxjs/add/operator/switchMap';
-import {Product} from "../model/product";
-import {ProductService} from "../services/product.service";
+import {Product} from '../model/product';
+import {ProductService} from '../services/product.service';
 
 @Component({
   selector: 'app-product-details',

@@ -1,8 +1,8 @@
-import {NgModule} from "@angular/core";
-import {RouterModule, Routes} from "@angular/router";
-import {ProductsComponent} from "./product/products.component";
-import {ProductDetailsComponent} from "./product/product-details.component";
-import {ScansComponent} from "./scan/scans.component";
+import {NgModule} from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
+import {ProductsComponent} from './product/products.component';
+import {ProductDetailsComponent} from './product/product-details.component';
+import {ScansComponent} from './scan/scans.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/scans', pathMatch: 'full'},

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import {PRODUCTS} from "./product.service";
-import {Scan} from "../model/scan";
+import {PRODUCTS} from './product.service';
+import {Scan} from '../model/scan';
 
 const SCANS: Scan[] = [
   { product: PRODUCTS[0], date: new Date('02/24/2017 19:25:00')  },
