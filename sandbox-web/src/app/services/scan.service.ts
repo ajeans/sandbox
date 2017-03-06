@@ -13,7 +13,7 @@ export class ScanService {
 
   getScans(): Promise<Scan[]> {
     return new Promise(resolve => {
-      setTimeout(() => resolve(SCANS), 5000);
+      setTimeout(() => resolve(SCANS), 3000);
     });
   }
 

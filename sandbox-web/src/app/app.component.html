@@ -1,17 +1,11 @@
 <h1>
   {{title}}
 </h1>
-<a routerLink="/scans"><h2>Scans</h2></a>
+<nav>
+  <a routerLink="/scans"><h2>Scans</h2></a>
+  <a routerLink="/products"><h2>Products</h2></a>
+</nav>
 
-<div *ngIf="selectedScan">
-  <app-product-details [product]="selectedScan.product"></app-product-details>
-</div>
 <br/>
-
-<a routerLink="/products"><h2>Products</h2></a>
-
-<div *ngIf="selectedProduct">
-  <app-product-details [product]="selectedProduct"></app-product-details>
-</div>
 
 <router-outlet></router-outlet>

@@ -30,9 +30,18 @@ import { ScansComponent } from './scan/scans.component';
         component: ProductsComponent
       },
       {
+        path: 'product/:id',
+        component: ProductDetailsComponent
+      },
+      {
         path: 'scans',
         component: ScansComponent
-      }
+      },
+      {
+        path: '',
+        redirectTo: '/scans',
+        pathMatch: 'full'
+      },
     ])
   ],
   providers: [],

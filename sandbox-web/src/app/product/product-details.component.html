@@ -1,3 +1,8 @@
-<p>{{product.code}}</p>
-<p>{{product.name}}</p>
-<p>{{product.description}}</p>
+<div *ngIf="!product">
+  Loading...
+</div>
+<div *ngIf="product">
+  <p>{{product.code}}</p>
+  <p>{{product.name}}</p>
+  <p>{{product.description}}</p>
+</div>

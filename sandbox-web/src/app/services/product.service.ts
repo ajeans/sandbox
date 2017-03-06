@@ -12,7 +12,12 @@ export class ProductService {
   getProducts(): Promise<Product[]> {
     //return Promise.resolve(PRODUCTS);
     return new Promise(resolve => {
-      setTimeout(() => resolve(PRODUCTS), 1000);
+      setTimeout(() => resolve(PRODUCTS), 500);
     });
+  }
+
+  getProduct(code: string): Promise<Product> {
+    return this.getProducts()
+      .then(products => products.find(product => product.code === code));
   }
 }

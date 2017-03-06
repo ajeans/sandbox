@@ -1,6 +1,5 @@
-<ul class="products">
-  <li *ngFor="let product of products"
-      (click)="onProductSelect(product)">
-    <app-product [product]="product" [class.selected]="product === selectedProduct"></app-product>
-  </li>
-</ul>
+<a *ngFor="let product of products"
+   [routerLink]="['/product', product.code]">
+  <app-product [product]="product"></app-product>
+  <br/>
+</a>
