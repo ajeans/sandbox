@@ -1,17 +1,17 @@
-<div *ngIf="!scans">
-  Loading...
-</div>
+<md-card *ngIf="!scans">
+  <md-spinner class="app-spinner"></md-spinner>
+</md-card>
 
 <ul class="scans">
   <li *ngFor="let scan of scans"
-      (click)="onScanSelect(scan)">
-    <app-scan [scan]="scan" [class.selected]="scan === selectedScan"></app-scan>
+                  (click)="onScanSelect(scan)">
+      <app-scan [scan]="scan" [class.selected]="scan === selectedScan"></app-scan>
   </li>
 </ul>
 
 <br/>
-<div *ngIf="selectedScan">
-  <app-scan [scan]="selectedScan"></app-scan>
-  <br>
-  <app-product [product]="selectedScan.product"></app-product>
-</div>
+  <div *ngIf="selectedScan">
+    <app-scan [scan]="selectedScan"></app-scan>
+    <br>
+    <app-product [product]="selectedScan.product"></app-product>
+  </div>

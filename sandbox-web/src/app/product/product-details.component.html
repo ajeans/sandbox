@@ -1,6 +1,7 @@
-<div *ngIf="!product">
-  Loading...
-</div>
+<md-card *ngIf="!product">
+  <md-spinner class="app-spinner"></md-spinner>
+</md-card>
+
 <div *ngIf="product">
   <p>{{product.code}}</p>
   <p>{{product.name}}</p>

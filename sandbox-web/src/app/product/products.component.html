@@ -1,6 +1,7 @@
-<div *ngIf="!products">
-  Loading...
-</div>
+<md-card *ngIf="!products">
+  <md-spinner class="app-spinner"></md-spinner>
+</md-card>
+
 <a *ngFor="let product of products"
    [routerLink]="['/product', product.code]">
   <app-product [product]="product"></app-product>
