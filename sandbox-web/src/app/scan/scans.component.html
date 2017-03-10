@@ -2,16 +2,19 @@
   <md-spinner class="app-spinner"></md-spinner>
 </md-card>
 
-<ul class="scans">
-  <li *ngFor="let scan of scans"
+<md-card>
+  <md-list dense class="scans">
+    <md-list-item *ngFor="let scan of scans"
                   (click)="onScanSelect(scan)">
       <app-scan [scan]="scan" [class.selected]="scan === selectedScan"></app-scan>
-  </li>
-</ul>
+    </md-list-item>
+  </md-list>
+</md-card>
 
-<br/>
-  <div *ngIf="selectedScan">
-    <app-scan [scan]="selectedScan"></app-scan>
-    <br>
-    <app-product [product]="selectedScan.product"></app-product>
-  </div>
+<md-card *ngIf="selectedScan">
+  <app-scan [scan]="selectedScan"></app-scan>
+</md-card>
+
+<md-card *ngIf="selectedScan">
+  <app-product [product]="selectedScan.product"></app-product>
+</md-card>

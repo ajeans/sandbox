@@ -2,8 +2,11 @@
   <md-spinner class="app-spinner"></md-spinner>
 </md-card>
 
-<a *ngFor="let product of products"
-   [routerLink]="['/product', product.code]">
-  <app-product [product]="product"></app-product>
-  <br/>
-</a>
+<md-card>
+  <md-list dense class="products">
+    <md-list-item *ngFor="let product of products"
+                  [routerLink]="['/product', product.code]">
+      <app-product [product]="product"></app-product>
+    </md-list-item>
+  </md-list>
+</md-card>
