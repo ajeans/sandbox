@@ -1,11 +1,27 @@
-<h1>
-  {{title}}
-</h1>
-<nav>
-  <a routerLink="/scans" routerLinkActive="active">Scans</a>
-  <a routerLink="/products" routerLinkActive="active">Products</a>
-</nav>
+<md-sidenav-container>
 
-<br/>
+  <md-sidenav #sidenav mode="side" class="app-sidenav">
+    <nav>
+      <div><a routerLink="/scans" routerLinkActive="active">Scans</a></div>
+      <div><a routerLink="/products" routerLinkActive="active">Products</a></div>
+    </nav>
+  </md-sidenav>
 
-<router-outlet></router-outlet>
+  <md-toolbar color="primary">
+    <button class="app-icon-button" (click)="sidenav.toggle()">
+      <i class="material-icons app-toolbar-menu">menu</i>
+    </button>
+
+    <span>{{title}}</span>
+  </md-toolbar>
+
+  <nav>
+    <a routerLink="/scans" routerLinkActive="active">Scans</a>
+    <a routerLink="/products" routerLinkActive="active">Products</a>
+  </nav>
+
+  <div>
+    <router-outlet></router-outlet>
+  </div>
+
+</md-sidenav-container>
