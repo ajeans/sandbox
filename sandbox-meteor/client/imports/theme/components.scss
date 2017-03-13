@@ -219,7 +219,11 @@
 "{}/node_modules/ionic-angular/components/toolbar/toolbar.wp";
 
 @import
-"{}/node_modules/ionic-angular/components/typography/typography",
+// Fails with
+// While processing files with angular2-compilers (for target web.cordova):
+// /client/main.scss: Scss compiler error: File to import:
+// {}/node_modules/ionic-angular/components/typography/typography not found in file: components
+// "{}/node_modules/ionic-angular/components/typography/typography",
 "{}/node_modules/ionic-angular/components/typography/typography.ios",
 "{}/node_modules/ionic-angular/components/typography/typography.md",
 "{}/node_modules/ionic-angular/components/typography/typography.wp";
