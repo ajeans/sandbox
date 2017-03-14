@@ -1,6 +1,7 @@
 import {NgModule, ErrorHandler} from '@angular/core';
-import {MyApp} from './app.component';
 import {IonicModule, IonicApp, IonicErrorHandler} from 'ionic-angular';
+import {MomentModule} from 'angular2-moment';
+import {MyApp} from './app.component';
 import {ChatsPage} from "../pages/chats/chats";
 
 @NgModule({
@@ -10,6 +11,7 @@ import {ChatsPage} from "../pages/chats/chats";
     ],
     imports: [
         IonicModule.forRoot(MyApp),
+        MomentModule
     ],
     bootstrap: [IonicApp],
     entryComponents: [
